@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->arrayNode('git')
-                    ->canBeEnabled()
+                    ->canBeDisabled()
                     ->children()
                         ->scalarNode('branch')->defaultValue('master')->end()
                         

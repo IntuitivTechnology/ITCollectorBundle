@@ -27,7 +27,7 @@ class ITCollectorExtension extends Extension
 
         $container->setParameter('it_collector.git', $config['git']);
 
-        if(!$config['git']['enabled']) {
+        if(isset($config['git']) && isset($config['git']['enabled']) && $config['git']['enabled'] === false) {
             $container->removeDefinition('it_collector.git');
         }
     }
