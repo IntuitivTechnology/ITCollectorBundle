@@ -26,5 +26,9 @@ class ITCollectorExtension extends Extension
         $loader->load('services.yml');
 
         $container->setParameter('it_collector.git', $config['git']);
+
+        if(!$config['git']['enabled']) {
+            $container->removeDefinition('it_collector.git');
+        }
     }
 }
