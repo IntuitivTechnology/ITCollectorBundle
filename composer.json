@@ -1,0 +1,36 @@
+{
+    "name" : "intuitiv/it-collector-bundle",
+    "description" : "Addons to the dev debug toolbar of Symfony2",
+    "type" : "symfony-bundle",
+    "homepage": "https://github.com/IntuitivTechnology/ITCollectorBundle",
+    "authors" : [
+        {
+            "name" : "Raphaël Amourette",
+            "email" : "amourette.raphael@gmail.com"
+        },
+        {
+            "name" : "Tristan Pettinotti",
+            "email" : "t.pettinotti@gmail.com"
+        }
+    ],
+    "keywords" : [
+        "symfony2", "dev", "toolbar", "git"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=5.3.9",
+        "symfony/framework-bundle": "~2.3"
+    },
+    "autoload" : {
+        "psr-0" : {
+            "IntuitivTechnology\\ITCollectorBundle" : ""
+        }
+    },
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "1.0.x-dev"
+        }
+    }
+}
