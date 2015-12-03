@@ -1,6 +1,6 @@
 services:
     it_collector.git:
-        class: ITCollectorBundle\DataCollector\GitCollector
+        class: Intuitiv\ITCollectorBundle\DataCollector\GitCollector
         arguments: ["@service_container"]
         tags: 
             - { name: data_collector, template: 'ITCollectorBundle:Profiler:template.html.twig', id: 'it.collector.git', priority: 10 }

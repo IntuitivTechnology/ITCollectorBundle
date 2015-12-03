@@ -1,6 +1,6 @@
 <?php
 
-namespace ITCollectorBundle;
+namespace Intuitiv\ITCollectorBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

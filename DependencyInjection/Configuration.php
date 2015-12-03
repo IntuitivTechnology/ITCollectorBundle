@@ -1,6 +1,6 @@
 <?php
 
-namespace ITCollectorBundle\DependencyInjection;
+namespace Intuitiv\ITCollectorBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

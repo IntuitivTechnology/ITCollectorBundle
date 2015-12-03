@@ -1,6 +1,6 @@
 <?php
 
-namespace ITCollectorBundle\DataCollector;
+namespace Intuitiv\ITCollectorBundle\DataCollector;
 
 use Symfony\Component\DependencyInjection\Container;
 
