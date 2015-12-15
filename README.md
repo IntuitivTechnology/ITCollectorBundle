@@ -13,10 +13,16 @@ You can also add some extra useful links in it (Link to the Gitlab/Github projec
 Installation
 ------------
 
+For Symfony < 2.8, use stable branch.
+For Symfony >= 2.8, use dev-master branch.
+
 ### Step 1: Download ITCollectorBundle using Composer
 
 ```bash
 $ composer require intuitiv/it-collector-bundle
+
+# symfony >= 2.8
+$ composer require intuitiv/it-collector-bundle dev-master
 ```
 
 ### Step 2: Enable the bundle
