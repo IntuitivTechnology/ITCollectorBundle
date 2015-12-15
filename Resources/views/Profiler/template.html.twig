@@ -2,15 +2,17 @@
 
 {% block toolbar %}
     {% set icon %}
-    <a href="#">
-        {# this is the content displayed as a panel in the toolbar #}
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwCCiwQaVTfzAAAAwFJREFUSMfd1kmIXkUQB/Df9+abZBKjE2NcZ0zCGONKIIJL4gKKIhMQiQt6UCNGPHhQ0IgaEREEIxgXPKqEiCuICubiggsoCEaDB0FxAVHJQQQvXjQ6Xv4tncd7k5jkZMGj+3VVV1VX/au6+b/TSOu/yTiYZc8g38hedBe5BjNtA5dhK64Nc9CjoKkUXIPD8z/oMTaDG7ENa2qDk9iU/+04prWxbD4Mi/E2pnArxisna9lJvItfcQ+Oqz26EpfgSMzBc7i54t+Cj/ASNsahBmdG9mPcWclvxJMYYj7WlRMWWoSLo6DQ7diZjedgtBWydu7PwGZ8hfWV3Om4HoeUfU08eRNHJ0Qn42usrBQ2e8ltAdEyfIYTMRcr8Fb4TY3W2wKEZfg5ikYPAPnf4HzchKv7UP0IvoxnTQWCfaW6FIbYgfv66m6AXYn/7iBtpqqhpsdAzSvyf2dcV51s0FYyk5ztyAa4F28kJKMdJy7OjOPulNTlWfsLPwb5nXF/CBdmPpKy+B3f5vsFR4Q3qPZdgT/i6PYYmgxviLVxZg88TKdA51fxvzQnOA/vYAsexlhlcA3uwAN4LZHYXWGgoPcLLK0NbkodtWvsaXyHs7EcT+DZSm4XXscJWIXfcF0LF9JpHixKx1LgS1KcbXRO4318gh8Cd5hIKD+PUx/g+I50LcQ8/Jn5v/Q8zsWxHRAvADsqciV/O3vKotBUjHyaHjzWhvcrGU9tgUN1Jc2p1hZ0pKHMT8r4ajCxh75BFlfhhayt7Km7CdyVBr2opzFM5TRbcFF09zaQ6RQsrO5o0uP4KaUyWikq4T8loT8LG/a1Nd0fiM9rGS38uR2NYJA+vAQX4KlZGn5n0h/HDTnR8pbMsMPg4lxF03k9dIGo97opLWtDusa2JP378NbH+60ZFyTnKxLOzZXumf/S+eE0vBeALG313xLeiaBxdeupsV/UROGLuKoFkPI8eTlgOWBjhYYZH8VjqcWR3CbPtGQOCtVv0YVpdR9Wt8JBOZVZ3i9jOHR/DP0DfJJ803OVm+UAAAAASUVORK5CYII=" alt=""/>
-        {% if collector.data.commit.status  == true %}
-            <span class="sf-toolbar-status sf-toolbar-status-green">{{ collector.data.commit.count }}</span>
+        {% set iconBase64 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wwCCiwQaVTfzAAAAwFJREFUSMfd1kmIXkUQB/Df9+abZBKjE2NcZ0zCGONKIIJL4gKKIhMQiQt6UCNGPHhQ0IgaEREEIxgXPKqEiCuICubiggsoCEaDB0FxAVHJQQQvXjQ6Xv4tncd7k5jkZMGj+3VVV1VX/au6+b/TSOu/yTiYZc8g38hedBe5BjNtA5dhK64Nc9CjoKkUXIPD8z/oMTaDG7ENa2qDk9iU/+04prWxbD4Mi/E2pnArxisna9lJvItfcQ+Oqz26EpfgSMzBc7i54t+Cj/ASNsahBmdG9mPcWclvxJMYYj7WlRMWWoSLo6DQ7diZjedgtBWydu7PwGZ8hfWV3Om4HoeUfU08eRNHJ0Qn42usrBQ2e8ltAdEyfIYTMRcr8Fb4TY3W2wKEZfg5ikYPAPnf4HzchKv7UP0IvoxnTQWCfaW6FIbYgfv66m6AXYn/7iBtpqqhpsdAzSvyf2dcV51s0FYyk5ztyAa4F28kJKMdJy7OjOPulNTlWfsLPwb5nXF/CBdmPpKy+B3f5vsFR4Q3qPZdgT/i6PYYmgxviLVxZg88TKdA51fxvzQnOA/vYAsexlhlcA3uwAN4LZHYXWGgoPcLLK0NbkodtWvsaXyHs7EcT+DZSm4XXscJWIXfcF0LF9JpHixKx1LgS1KcbXRO4318gh8Cd5hIKD+PUx/g+I50LcQ8/Jn5v/Q8zsWxHRAvADsqciV/O3vKotBUjHyaHjzWhvcrGU9tgUN1Jc2p1hZ0pKHMT8r4ajCxh75BFlfhhayt7Km7CdyVBr2opzFM5TRbcFF09zaQ6RQsrO5o0uP4KaUyWikq4T8loT8LG/a1Nd0fiM9rGS38uR2NYJA+vAQX4KlZGn5n0h/HDTnR8pbMsMPg4lxF03k9dIGo97opLWtDusa2JP378NbH+60ZFyTnKxLOzZXumf/S+eE0vBeALG313xLeiaBxdeupsV/UROGLuKoFkPI8eTlgOWBjhYYZH8VjqcWR3CbPtGQOCtVv0YVpdR9Wt8JBOZVZ3i9jOHR/DP0DfJJ803OVm+UAAAAASUVORK5CYII=' %}
+
+        {# define status #}
+        {% if collector.data.commit.status == true %}
+            {% set status = 'green' %}
         {% else %}
-            <span class="sf-toolbar-status sf-toolbar-status-red">{{ collector.data.commit.count }}</span>
+            {% set status = 'red' %}
         {% endif %}
-        </a>
+
+        <img src="{{ iconBase64 }}" alt="" />
+        <span class="sf-toolbar-value">{{ collector.data.commit.count }}</span>
     {% endset %}
 
     {% set text %}
