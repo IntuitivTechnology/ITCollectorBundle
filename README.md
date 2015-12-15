@@ -6,14 +6,14 @@ This bundle will allow you to add some extra features to your Symfony2 dev debug
 Git
 -------------
 
-You will be able to view, directly in the toolbar, if your local git branch is up-to-date compared to the distant branch.
+You will be able to view, directly in the toolbar, if your local git branch is up-to-date compared to the distant branch.  
 You can also add some extra useful links in it (Link to the Gitlab/Github project for example).
 
 
 Installation
 ------------
 
-For Symfony < 2.8, use stable branch.
+For Symfony < 2.8, use stable branch.  
 For Symfony >= 2.8, use dev-master branch.
 
 ### Step 1: Download ITCollectorBundle using Composer
